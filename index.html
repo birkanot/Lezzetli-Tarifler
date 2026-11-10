@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Lezzetli Tarifler ile mutfağınıza ilham katın. Denenmiş, pratik ve nefis Türk yemek tariflerini keşfedin.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Lezzetli Tarifler — Mutfağınıza ilham">
+  <meta property="og:description" content="Her gün için denenmiş, nefis ve pratik tarifler.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85">
+  <title>Lezzetli Tarifler — Mutfağınıza ilham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json" id="site-schema">{"@context":"https://schema.org","@type":"WebSite","name":"Lezzetli Tarifler","inLanguage":"tr-TR","potentialAction":{"@type":"SearchAction","target":"?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="announcement"><span>✦</span> Sofranıza ilham, mutfağınıza lezzet <span>✦</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Lezzetli Tarifler ana sayfa"><span class="brand-mark">L<span>♥</span></span><span class="brand-name">Lezzetli <em>Tarifler</em></span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="main-nav" aria-label="Ana menü">
+      <a href="#" class="nav-link active">Ana Sayfa</a>
+      <a href="#categories" class="nav-link">Kategoriler</a>
+      <a href="#recipes" class="nav-link">Tarifler</a>
+      <a href="#about" class="nav-link">Hakkımızda</a>
+    </nav>
+    <button class="admin-link" id="admin-open" aria-label="Yönetim paneli">⚙ <span>Yönetim</span></button>
+  </header>
+  <main id="app">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> MUTFAĞINIZIN YENİ FAVORİSİ</p>
+        <h1>Her lokmada<br><em>bir mutluluk.</em></h1>
+        <p class="hero-text">Denenmiş tarifler, ilham veren sofralar. Bugün mutfağınızda ne pişireceğinizi birlikte bulalım.</p>
+        <a class="button button-dark" href="#recipes">Tarifleri keşfet <span>↗</span></a>
+        <div class="hero-note"><div class="mini-avatars"><span>👩🏻‍🍳</span><span>👨🏽‍🍳</span><span>👩🏼‍🍳</span></div><p><strong>Binlerce mutfakta</strong><br>denendi, çok sevildi</p></div>
+      </div>
+      <div class="hero-visual"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85" alt="Renkli, taze malzemelerle hazırlanmış nefis bir yemek" fetchpriority="high"><div class="hero-sticker"><span>✦</span><strong>Günün<br>lezzeti</strong><small>Özenle seçildi</small></div><div class="hero-caption">Taze malzeme, bolca sevgi.</div></div>
+      <div class="hero-decor decor-one">✳</div><div class="hero-decor decor-two">✳</div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">NE YESEK?</p><h2>Tarifini <em>bul.</em></h2></div><a class="text-link" href="#recipes">Tüm tarifler <span>→</span></a></div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+
+    <section class="seasonal-banner"><div class="seasonal-text"><p class="eyebrow">MEVSİMİN GÜZELLİKLERİ</p><h2>Mevsiminde güzel,<br><em>sofrada özel.</em></h2><p>Taptaze malzemelerle hazırlanan tariflerle mevsimin tadını çıkarın.</p><a class="button button-light" href="#recipes">Mevsim tarifleri <span>↗</span></a></div><div class="seasonal-image"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=85" alt="Mevsim sebzeleri ve sağlıklı yemek" loading="lazy"></div><span class="banner-spark">✳</span></section>
+
+    <section class="section recipes-section" id="recipes">
+      <div class="section-heading"><div><p class="eyebrow">SİZİN İÇİN SEÇTİK</p><h2>Çok sevilen <em>tarifler.</em></h2></div><span class="recipe-count" id="recipe-count"></span></div>
+      <form class="search-bar" id="search-form" role="search"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Tarif veya malzeme ara..." aria-label="Tarif veya malzeme ara"><button type="submit">Ara</button></form>
+      <div class="filter-row" id="filter-row" aria-label="Tarif kategorileri"></div>
+      <div class="recipe-grid" id="recipe-grid"></div>
+      <p class="empty-state hidden" id="empty-state">Aradığınız kriterlere uygun tarif bulamadık. Başka bir arama deneyin.</p>
+    </section>
+
+    <section class="newsletter" id="about"><div class="newsletter-icon">✉</div><p class="eyebrow">MUTFAĞINIZDAN HABERLER</p><h2>Lezzetli bir not<br><em>kutunuza düşsün.</em></h2><p>Yeni tarifler ve mutfak sırları için bültenimize katılın.</p><form id="newsletter-form"><label class="sr-only" for="email">E-posta adresiniz</label><input id="email" type="email" placeholder="E-posta adresiniz" required><button type="submit" aria-label="Bültene kaydol">Katıl <span>→</span></button></form><small id="newsletter-message">Sadece güzel şeyler. Dilediğiniz zaman ayrılabilirsiniz.</small></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">L<span>♥</span></span><span class="brand-name">Lezzetli <em>Tarifler</em></span></a><p>Güzel sofralar, güzel anılar.</p><div class="footer-bottom"><span>© <span id="year"></span> Lezzetli Tarifler</span><span>Sevgiyle pişirildi <b>♥</b></span><a href="#admin" id="footer-admin">Yönetim paneli</a></div></footer>
+  <div class="modal-backdrop hidden" id="modal-backdrop" role="presentation"><section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Kapat">×</button><div id="modal-content"></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
